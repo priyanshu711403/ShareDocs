@@ -37,7 +37,7 @@ const Home = async () => {
                </div>
                <ul className="document-ul">
                   {sortedDocuments.map(({ id, metadata, createdAt, lastConnectionAt }: any) => (
-                     <li id={id} className="document-list-item">
+                     <li key={id} className="document-list-item">
                         <Link href={`/documents/${id}`} className="flex flex-1 items-center gap-4">
                            <div className="hidden rounded-md bg-dark-500 p-2 sm:block">
                               <Image src="/assets/icons/doc.svg" alt="file" width={40} height={40} />

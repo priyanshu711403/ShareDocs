@@ -36,7 +36,7 @@ const ShareModal = ({ roomId, collaborators, creatorId, currentUserType }: Share
             <DialogContent className="shad-dialog ">
                <DialogHeader>
                   <DialogTitle>Manage who can view this project</DialogTitle>
-                  <DialogDescription>Select users as either 'editor' or 'viewer'</DialogDescription>
+                  <DialogDescription>Select users as either editor or viewer</DialogDescription>
                </DialogHeader>
                <Label htmlFor="email" className="mt-6 text-blue-100">
                   Email Address

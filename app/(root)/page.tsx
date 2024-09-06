@@ -29,10 +29,11 @@ const Home = async () => {
                </SignedIn>
             </div>
          </Header>
+
          {roomDocuments.data.length > 0 ? (
             <div className="document-list-container">
                <div className="document-list-title">
-                  <h3 className="text-28-semibold">All Documents</h3>
+                  <h3 className="text-28-semibold">All documents</h3>
                   <AddDocumentButton userId={clerkUser.id} email={clerkUser.emailAddresses[0].emailAddress} />
                </div>
                <ul className="document-ul">
@@ -45,7 +46,7 @@ const Home = async () => {
                            <div className="space-y-1">
                               <p className="line-clamp-1 text-lg">{metadata.title}</p>
                               <p className="text-xs font-extralight text-blue-100">
-                                 Created {dateConverter(createdAt)} . Opened {dateConverter(lastConnectionAt)}
+                                 Created about {dateConverter(createdAt)} . Opened {dateConverter(lastConnectionAt)}
                               </p>
                            </div>
                         </Link>
@@ -56,11 +57,13 @@ const Home = async () => {
             </div>
          ) : (
             <div className="document-list-empty">
-               <Image src="/assets/icons/doc.svg" alt="document" width={40} height={40} className="mx-auto" />
+               <Image src="/assets/icons/doc.svg" alt="Document" width={40} height={40} className="mx-auto" />
+
                <AddDocumentButton userId={clerkUser.id} email={clerkUser.emailAddresses[0].emailAddress} />
             </div>
          )}
       </main>
    );
 };
+
 export default Home;

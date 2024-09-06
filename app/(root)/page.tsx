@@ -16,7 +16,7 @@ const Home = async () => {
    if (!clerkUser) redirect("/sign-in");
    const roomDocuments = await getDocuments(clerkUser.emailAddresses[0].emailAddress);
 
-   const sortedDocuments = roomDocuments.data.sort(
+   const sortedDocuments = roomDocuments?.data?.sort(
       (a: any, b: any) => new Date(b.lastConnectionAt).getTime() - new Date(a.lastConnectionAt).getTime()
    );
    return (
